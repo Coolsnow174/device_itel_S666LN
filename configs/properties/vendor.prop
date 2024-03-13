@@ -296,6 +296,7 @@ debug.sf.enable_transaction_tracing=false
 ro.surface_flinger.vsync_event_phase_offset_ns=8400000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=-10933333
 debug.sf.phase_offset_threshold_for_next_vsync_ns=6100000
+debug.sf.defer_refresh_rate_when_off=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.region_sampling_duration_ns=8333333
 debug.sf.region_sampling_period_ns=99999984
