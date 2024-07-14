@@ -90,8 +90,6 @@ $(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,tru
 # Graphics
 TARGET_USES_VULKAN := true
 
-# Graphics
-TARGET_USES_VULKAN := true
 
 # Kernel
 TARGET_NO_KERNEL_OVERRIDE := true
@@ -177,6 +175,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := S666LN,itel-S666LN
+
+# SurfaceFlinger
+TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Vendor Security Patch
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
