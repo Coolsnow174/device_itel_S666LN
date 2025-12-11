@@ -6,6 +6,7 @@
 
 DEVICE_PATH := device/itel/S666LN
 KERNEL_PATH := $(DEVICE_PATH)-kernel
+COMMON_GKI_PATH := device/millennium/common-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -88,7 +89,7 @@ TARGET_USES_VULKAN := true
 
 # Kernel
 TARGET_NO_KERNEL_OVERRIDE := true
-LOCAL_KERNEL := $(KERNEL_PATH)/Image.gz
+LOCAL_KERNEL := $(COMMON_GKI_PATH)/Image.gz
 PRODUCT_COPY_FILES += \
 	$(LOCAL_KERNEL):kernel
 
@@ -236,7 +237,7 @@ WIFI_HAL_INTERFACE_COMBINATIONS += ,{{{STA}, 1}, {{NAN}, 1}}
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Workaround to make lineage's soong generator work
-TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+TARGET_KERNEL_SOURCE := $(COMMON_GKI_PATH)/kernel-headers
 
 # Inherit the proprietary files
 include vendor/itel/S666LN/BoardConfigVendor.mk
