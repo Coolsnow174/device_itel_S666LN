@@ -203,12 +203,12 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-V1-ndk.vendor
 
 PRODUCT_PACKAGES += \
-    libcurl.vendor 
+    libcurl.vendor
 
 # Health
 PRODUCT_PACKAGES += \
-    android.hardware.health-service.mediatek \
-    android.hardware.health-service.mediatek-recovery \
+    android.hardware.health-service.example \
+    android.hardware.health-service.example-recovery \
     charger_res_images_vendor
 
 # HIDL
