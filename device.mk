@@ -480,6 +480,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
 
+# Userdata
+PRODUCT_FS_COMPRESSION := 1
+
 # ViPER4Android
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
