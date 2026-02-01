@@ -15,12 +15,11 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from S666LN device
 $(call inherit-product, device/itel/S666LN/device.mk)
 
-BOARD_VENDOR := Itel
 PRODUCT_NAME := lineage_S666LN
 PRODUCT_DEVICE := S666LN
-PRODUCT_MANUFACTURER := ITEL
+PRODUCT_MANUFACTURER := Itel
 PRODUCT_BRAND := itel
-PRODUCT_MODEL := itel S666LN
+PRODUCT_MODEL := S666LN
 
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_SYSTEM_NAME := S666LN-OP
