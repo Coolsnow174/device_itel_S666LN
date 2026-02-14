@@ -516,19 +516,12 @@ PRODUCT_PACKAGES += \
    vndservice
     
 # Wi-Fi
+$(call soong_config_set,wpa_supplicant_8,board_wlan_mediatek_stability,true)
+
 PRODUCT_PACKAGES += \
-    libwifi-hal-wrapper \
     android.hardware.wifi-service \
     wpa_supplicant \
-    lib_driver_cmd_mt66xx \
-    hostapd \
-    libkeystore-wifi-hidl:64 \
-    libkeystore-engine-wifi-hidl:64
-    
-PRODUCT_PACKAGES += \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor \
-    android.hardware.tetheroffload.control@1.1.vendor
+    hostapd
     
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/wifi/,$(TARGET_COPY_OUT_VENDOR)/etc/wifi)
