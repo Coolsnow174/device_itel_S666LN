@@ -1,19 +1,28 @@
 #!/bin/bash
 
-echo "- Applying Aperture Mediatek HFPS Mode Patch"
+RET=0
+echo "- Applying Aperture Mediatek HFPS Mode and EIS Patches"
 cd packages/apps/Aperture
-curl https://github.com/Nothing-2A/android_packages_apps_Aperture/commit/9509277efc852ad8bdcce204e0d9cfe104b6d190.patch | git am || {
+curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packages/apps/Aperture/0001-Aperture-Enable-MediaTek-HFPS-Mode-for-60-FPS-video-.patch | git am || {
+  RET=$?
+  git am --abort >/dev/null 2>&1
+}
+cd packages/apps/Aperture
+curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packages/apps/Aperture/0002-Aperture-Enable-MediaTek-EIS-and-EIS-preview-mode-fo.patch | git am || {
   RET=$?
   git am --abort >/dev/null 2>&1
 }
 cd ../../../
+echo "- Applying WPA3 Patch"
+cd external/wpa_supplicant_8
+curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/external/wpa_supplicant_8/do_not_set_NL80211_WPA_VERSION_3.patch | git am || {
+  RET=$?
+  git am --abort >/dev/null 2>&1
+}
+cd ../../
 
 if [ $RET -ne 0 ]; then
   echo "ERROR: Patch is not applied! Maybe it's already patched, or you'll have to adapt it to this specific rom source?"
 else
   echo "OK: All patched"
 fi
-
-deviceDir=$(gettop)/device/itel/S666LN
-
-${deviceDir}/applypatch.sh ${deviceDir}/patches
