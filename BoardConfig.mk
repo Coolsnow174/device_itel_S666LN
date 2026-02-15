@@ -74,7 +74,7 @@ BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PATH)/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
 
 # Display
-TARGET_SCREEN_DENSITY := 292
+TARGET_SCREEN_DENSITY := 320
 
 # Lineage Health
 $(call soong_config_set,lineage_health,charging_control_charging_disabled,1)
