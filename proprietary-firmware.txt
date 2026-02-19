@@ -1,0 +1,15 @@
+## All proprietary files from this list, unless pinned and noted otherwise, are
+## from S666LN-MA66BABCDEFLMNQ-T-OP-250920V1629
+
+dpm.img;AB
+gz.img;AB
+lk.img;AB|b9525421a3abb1a772ed864d389a789a8981bedc
+logo.bin:logo.img;AB|e579de3bda6387dee27e67524bdca7819d5b8d8c
+mcupm.img;AB
+md1img.img;AB
+pi_img.img;AB
+scp.img;AB
+spmfw.img;AB
+sspm.img;AB
+tee.img;AB
+tkv.img;AB

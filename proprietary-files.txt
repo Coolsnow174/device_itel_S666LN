@@ -1,4 +1,4 @@
-## s666ln package version: S666LN-MA66BABCDEFLMNQ-T-OP-250516V1582, unless stated otherwise
+## s666ln package version: S666LN-MA66BABCDEFLMNQ-T-OP-250920V1629, unless stated otherwise
 
 # APU
 vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
