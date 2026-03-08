@@ -332,18 +332,6 @@
          tts, etc. dialogs. -->
     <string name="config_appsNotReportingCrashes">com.google.android.tts</string>   
 
-     <!-- Flag indicating whether the surfaceflinger has limited
-         alpha compositing functionality in hardware.  If set, the window
-         manager will disable alpha trasformation in animations where not
-         strictly needed. -->
-     <bool name="config_sf_limitedAlpha">true</bool>
-
-    <!-- Flag indicating whether the surface flinger is inefficient
-         at performing a blur.  Used by parts of the UI to turn off
-         the blur effect where it isn't worth the performance hit.
-         As of Honeycomb, blurring is not supported anymore. -->
-    <bool name="config_sf_slowBlur">false</bool>
-
     <!-- TCP Buffers -->
     <string-array name="config_network_type_tcp_buffers">
         <item>GPRS:4092,8760,48000,4096,8760,48000</item>
