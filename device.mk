@@ -343,7 +343,8 @@ PRODUCT_PACKAGES += \
     WifiResTarget
 
 PRODUCT_PACKAGES += \
-	ApertureOverlay
+    ApertureOverlay \
+    NcmTetheringOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
