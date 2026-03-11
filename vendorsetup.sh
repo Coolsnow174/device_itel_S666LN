@@ -7,7 +7,6 @@ curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packa
   RET=$?
   git am --abort >/dev/null 2>&1
 }
-cd packages/apps/Aperture
 curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packages/apps/Aperture/0002-Aperture-Enable-MediaTek-EIS-and-EIS-preview-mode-fo.patch | git am || {
   RET=$?
   git am --abort >/dev/null 2>&1
