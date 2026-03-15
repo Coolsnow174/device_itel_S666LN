@@ -1,0 +1,1 @@
+allow smartcharging kmsg_device:chr_file getattr;
