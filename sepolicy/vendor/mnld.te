@@ -1,0 +1,2 @@
+dontaudit mnld proc_bootconfig:file read;
+dontaudit mnld default_prop:file read;
