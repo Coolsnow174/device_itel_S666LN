@@ -25,8 +25,6 @@ ro.sf.blurs_are_expensive=1
 ro.surface_flinger.supports_background_blur=1
 
 # Camera
-persist.vendor.camera.privapp.list=org.lineageos.aperture
-vendor.camera.aux.packagelist=org.lineageos.aperture
 vendor.camera.tran.nums=1
 
 # Dex
@@ -43,14 +41,12 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
-# Kernel
-ro.kernel.zio=38,108,105,16
+# iorapd
 ro.iorapd.enable=false
 
 # Media
 debug.stagefright.c2inputsurface=-1
 media.stagefright.thumbnail.prefer_hw_codecs=true
-ro.vendor.mtk_flv_playback_support=1
 ro.vendor.mtk_omacp_support=1
 ro.vendor.mtk_telephony_add_on_policy=0
 

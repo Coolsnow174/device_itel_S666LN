@@ -85,9 +85,6 @@ ro.virtual_ab.compression.threads=true
 # FM
 ro.vendor.fm.platform=mt6631_6635
 
-# FRP
-ro.frp.pst=/dev/block/by-name/frp
-
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
@@ -116,7 +113,6 @@ ro.vendor.smvr.p2batch.hd=4
 ro.vendor.smvr.p2batch.vga=8
 service.sf.prime_shader_cache=0
 persist.vendor.sys.mtkaal.function=0
-
 
 # GPS
 ro.vendor.gps.chrdev=gps_drv_stp
@@ -184,21 +180,11 @@ ro.vendor.mtk_nn.option=A,B,C,D,E,F,G,Z
 ro.vendor.mtk_nn_baseline_support=1
 ro.vendor.mtk_nn_quant_preferred=1
 
-# Paytrigger
-ro.hardware.paytrigger=trustonic
-
-# Power
-persist.vendor.powerhal.thermal_ux_temp_max=55000
-persist.vendor.powerhal.thermal_ux_temp_min=43000
-ro.vendor.powerhal.cloud=1
-ro.vendor.powerhal.encode=1
-ro.vendor.powerhal.thermal_ux_support=1
-ro.vendor.powerhal_fling_mode_support=1
-
 # Power
 vendor.powerhal.interaction.offset=0
-vendor.powerhal.interaction.max=150
 vendor.powerhal.interaction.min=50
+vendor.powerhal.interaction.max=150
+ro.vendor.powerhal_fling_mode_support=1
 
 # PQ
 ro.vendor.mtk_pq_color_mode=1
@@ -325,38 +311,6 @@ persist.sys.sf.native_mode=2
 ro.surface_flinger.set_idle_timer_ms=3000
 ro.surface_flinger.set_touch_timer_ms=500
 
-# Surfaceflinger | cpupolicy
-vendor.debug.sf.cpupolicy=0
-vendor.debug.sf.cpupolicy.base_min_bl=310
-vendor.debug.sf.cpupolicy.hw_comp_suspend=1
-vendor.debug.sf.cpupolicy.hw_hfr_suspend=1
-vendor.debug.sf.cpupolicy.lowbound_uclamp_min=165
-vendor.debug.sf.cpupolicy.max_correct_offset=150
-vendor.debug.sf.cpupolicy.min_120=165
-vendor.debug.sf.cpupolicy.min_30_mml=165
-vendor.debug.sf.cpupolicy.min_60=130
-vendor.debug.sf.cpupolicy.min_60_mml=165
-vendor.debug.sf.cpupolicy.min_90=165
-vendor.debug.sf.cpupolicy.min_boost=165
-vendor.debug.sf.cpupolicy.power_down_120=300000
-vendor.debug.sf.cpupolicy.power_up_120=-300000
-vendor.debug.sf.cpupolicy.re_hfr=0
-vendor.debug.sf.cpupolicy.rt_bl_min=300
-vendor.debug.sf.cpupolicy.sf_cpu_thres=290
-vendor.debug.sf.cpupolicy.upbound_uclamp_max_ll=262
-vendor.debug.sf.cpupolicy.upbound_uclamp_min=350
-vendor.debug.sf.cpupolicy.upbound_uclamp_ret_sys=210
-vendor.debug.sf.cpupolicy.xgf_min=25
-
-# Storage
-external_storage.casefold.enabled=1
-external_storage.projid.enabled=1
-external_storage.sdcardfs.enabled=0
-ro.vendor.mtk_dmc_support=1
-ro.vendor.mtk_emmc_support=1
-ro.vendor.mtk_f2fs_enable=1
-ro.vendor.mtk_ufs_support=1
-
 # SoC
 ro.soc.manufacturer=MediaTek
 ro.soc.model=MT6789V/CD
@@ -364,11 +318,6 @@ ro.soc.model=MT6789V/CD
 # TEE
 ro.vendor.mtk_tee_gp_support=1
 ro.vendor.mtk_trustonic_tee_support=1
-
-# Thermal
-ro.vendor.tran.hbm.thermal-patch=/devices/platform/thermal-ntc1
-ro.vendor.tran.hbm.thermal.temp.clr=42000
-ro.vendor.tran.hbm.thermal.temp.trig=44000
 
 # Wifi
 persist.vendor.mtk_wfc_support=1
