@@ -15,11 +15,12 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from S666LN device
 $(call inherit-product, device/itel/S666LN/device.mk)
 
+BOARD_VENDOR := Itel
 PRODUCT_NAME := lineage_S666LN
 PRODUCT_DEVICE := S666LN
-PRODUCT_MANUFACTURER := Itel
-PRODUCT_BRAND := itel
-PRODUCT_MODEL := S666LN
+PRODUCT_MANUFACTURER := ITEL
+PRODUCT_BRAND := Itel
+PRODUCT_MODEL := itel S666LN
 
 PRODUCT_GMS_CLIENTID_BASE := android-transsion
 PRODUCT_SYSTEM_NAME := S666LN-OP
@@ -28,8 +29,8 @@ PRODUCT_SYSTEM_DEVICE := S666LN
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="sys_tssi_64_armv82_itel-user 13 TP1A.220624.014 974711 release-keys" \
     BuildFingerprint=Itel/S666LN-OP/itel-S666LN:13/TP1A.220624.014/251212V1661:user/release-keys \
-    DeviceProduct=S666LN-OP \
-    DeviceName=itel-S666LN
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
 # Time
 LINEAGE_VERSION_APPEND_TIME_OF_DAY := true
