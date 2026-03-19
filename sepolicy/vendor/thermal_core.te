@@ -7,3 +7,4 @@ allow thermal_core thermal_manager_data_file:file create_file_perms;
 allow thermal_core vendor_shell_exec:file { read execute execute_no_trans };
 allow thermal_core vendor_toolbox_exec:file { read execute execute_no_trans };
 allow thermal_core vendor_file:file execute_no_trans;
+dontaudit thermal_core self:capability dac_override;

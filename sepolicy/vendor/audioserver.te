@@ -4,3 +4,4 @@ dontaudit audioserver vendor_default_prop:file { read open };
 
 allow audioserver unlabeled:file { read write open getattr };
 allow hal_audio_default hal_audio_default:process { execmem };
+dontaudit audioserver vendor_default_prop:file map;

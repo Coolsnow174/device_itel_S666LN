@@ -40,3 +40,4 @@ allow hal_power_default proc_game_state:lnk_file { ioctl read write getattr lock
 allow hal_power_default sysfs_cm_mgr:dir r_dir_perms;
 allow hal_power_default sysfs_cm_mgr:file rw_file_perms;
 hal_client_domain(hal_power_default, hal_thermal)
+dontaudit hal_power_default self:capability dac_override;
