@@ -14,6 +14,7 @@ on post-fs-data
     chmod 0660 /dev/MAINAF
     chown system camera /dev/MAINAF
 
+    # Vibrator sysfs
     chown system system /sys/class/leds/vibrator_single/activate
     chown system system /sys/class/leds/vibrator_single/activate_mode
     chown system system /sys/class/leds/vibrator_single/awrw

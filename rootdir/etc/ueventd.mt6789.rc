@@ -108,3 +108,60 @@
 /dev/dma_heap/mtk_sapu_data_shm_region-aligned      0444   system     system
 /dev/dma_heap/mtk_sapu_engine_shm_region            0444   system     system
 /dev/dma_heap/mtk_sapu_engine_shm_region-aligned    0444   system     system
+
+# SCP / SSPM / TrustZone
+/dev/scp                  0440   root       system
+/dev/sspm                 0440   root       system
+
+# PTMX
+/dev/ptmx                 0666   root       radio
+
+# CMDQ & MDP
+/dev/mtk_mdp              0640   system     system
+/dev/mdp_sync             0644   system     system
+/dev/mml_pq               0640   system     system
+/dev/audio_ipi            0640   media      media
+
+# Fingerprint
+/dev/goodix_fp            0666   system     system
+
+# v4l2 codec
+/dev/vcu                  0660   media      system
+/dev/video0               0666   mediacodec system
+/dev/video1               0666   mediacodec system
+
+# Display
+/dev/graphics/fb0         0660   system     graphics
+/dev/mtk_disp_mgr         0660   system     graphics
+/dev/mtkfb_vsync          0660   system     graphics
+/dev/sw_sync              0660   system     graphics
+
+# Android SEC
+/dev/sec                  0660   root       system
+
+# FM Radio
+/dev/fm                   0660   media      media
+
+# Bluetooth
+/dev/uinput               0660   system     net_bt_admin
+
+# gz
+/dev/gz_kree              0660   system     system
+
+# Camera
+/dev/camera-isp           0660   system     camera
+/dev/camera-mem           0660   system     camera
+/dev/camera-dip           0660   system     camera
+/dev/camera-rsc           0660   system     camera
+/dev/camera-fdvt          0660   system     camera
+/dev/kd_camera_hw         0660   system     camera
+/dev/seninf               0660   system     camera
+/dev/seninf_n3d           0660   system     camera
+/dev/flashlight           0660   system     camera
+/dev/MAINAF               0660   system     camera
+
+# VOW / USIP
+/dev/vow                  0640   media      media
+/dev/usip                 0660   media      media
+/dev/mcupm                0440   root       system
+/dev/drm_wv               0660   media      system

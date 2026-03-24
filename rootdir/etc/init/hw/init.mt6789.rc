@@ -134,92 +134,22 @@ on post-fs-data
 
 # -----------------------
 # Add by MTK
-    # SCP log
+    # SCP / SSPM sysfs
     chmod 0660 /sys/class/misc/scp/scp_mobile_log
     chown root system /sys/class/misc/scp/scp_mobile_log
-    chmod 0440 /dev/scp
-    chown root system /dev/scp
-    
-    # SSPM log
     chmod 0620 /sys/class/misc/sspm/sspm_mobile_log
     chown root system /sys/class/misc/sspm/sspm_mobile_log
-    chmod 0440 /dev/sspm
-    chown root system /dev/sspm
 
-    # set ptmx group to non-root
-    chown root radio /dev/ptmx
+    # MMQoS Camera Bandwidth
+    chmod 0660 /sys/devices/platform/soc/soc:interconnect/mmqos_hrt/camera_max_bw
+    chown media media /sys/devices/platform/soc/soc:interconnect/mmqos_hrt/camera_max_bw
 
-    # CMDQ
-    chmod 0640 /dev/mtk_mdp
-    chown system system /dev/mtk_mdp
-
-    # MDP SYNC
-    chmod 0644 /dev/mdp_sync
-    chown system system /dev/mdp_sync
-
-    # MML PQ
-    chmod 0640 /dev/mml_pq
-    chown system system /dev/mml_pq
-
-    #OPEN DSP
-    chmod 0640 /dev/audio_ipi
-    chown media media /dev/audio_ipi
-
-    #Fingerprint
-    chmod 0666 /dev/goodix_fp
-
-    #v4l2 codec
-    chmod 0660 /dev/vcu
-    chown media system /dev/vcu
-    chmod 0666 /dev/video0
-    chown mediacodec system /dev/video0
-    chmod 0666 /dev/video1
-    chown mediacodec system /dev/video1
     mkdir /data/vendor/vcodec 0777 media system
     mkdir /data/vendor/vcodec/log 0770 media system
     mkdir /data/vendor/vcodec/in 0770 media system
     mkdir /data/vendor/vcodec/out 0770 media system
 
-    # Display
-    chmod 0660 /dev/graphics/fb0
-    chown system graphics /dev/graphics/fb0
 
-    chmod 0660 /dev/mtk_disp_mgr
-    chown system graphics /dev/mtk_disp_mgr
-
-    chmod 0660 /dev/mtkfb_vsync
-    chown system graphics /dev/mtkfb_vsync
-
-    chmod 0660 /dev/sw_sync
-    chown system graphics /dev/sw_sync
-
-    # Android SEC related device nodes
-    chmod 0660 /dev/sec
-    chown root system /dev/sec
-
-    # FM Radio device node
-    chmod 0660 /dev/fm
-    chown media media /dev/fm
-
-    # bluetooth
-    #Use uinput's default permission
-    chown system net_bt_admin /dev/uinput
-
-    # gz device
-    chmod 0660 /dev/gz_kree
-    chown system system /dev/gz_kree
-
-    #Camera
-    chmod 0660 /dev/camera-isp
-    chmod 0660 /dev/camera-mem
-    chmod 0660 /dev/camera-dip
-    chmod 0660 /dev/camera-rsc
-    chmod 0660 /dev/camera-fdvt
-    chmod 0660 /dev/kd_camera_hw
-    chmod 0660 /dev/seninf
-    chmod 0660 /dev/seninf_n3d
-    chmod 0660 /dev/flashlight
-    chmod 0660 /dev/MAINAF
 
 #ITD: Modify Camera By Yingji.Wang 220426 Start
     #DualCam
@@ -241,41 +171,20 @@ on post-fs-data
     mkdir /data/vendor/camera_watermark 0777 system system
 #ITD:modify by camera driver junfeng.qin5 20220501 end
 
-    chown system camera /dev/camera-isp
-    chown system camera /dev/camera-mem
-    chown system camera /dev/camera-dip
-    chown system camera /dev/camera-rsc
-    chown system camera /dev/camera-fdvt
-    chown system camera /dev/kd_camera_hw
-    chown system camera /dev/seninf
-    chown system camera /dev/seninf_n3d
-    chown system camera /dev/flashlight
-    chown system camera /dev/MAINAF
+
     chown root root /sys/class/main2_light/main2_light/main2_light
     chmod 0666 /sys/class/main2_light/main2_light/main2_light
     chown system camera /sys/kernel/debug/mtk_cam_dbg/0/ctrl
     chown system camera /sys/kernel/debug/mtk_cam_dbg/1/ctrl
     chown system camera /sys/kernel/debug/mtk_cam_dbg/2/ctrl
 
-    #VOW
-    chmod 0640 /dev/vow
-    chown media media /dev/vow
 
-    # MMQoS
-    chmod 0660 /sys/devices/platform/soc/soc:interconnect/mmqos_hrt/camera_max_bw
-    chown media media /sys/devices/platform/soc/soc:interconnect/mmqos_hrt/camera_max_bw
-
-    #usip
-    chmod 0660 /dev/usip
-    chown media media /dev/usip
 
 	#Thermal
 	mkdir /data/vendor/.tp/ 0775 system system
 	mkdir /data/vendor/thermal/ 0775 system system
 
-    #MCUPM log
-    chmod 0440 /dev/mcupm
-    chown root system /dev/mcupm
+
 
     #EM of MT6360
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmu.5-0034/data
@@ -286,10 +195,6 @@ on post-fs-data
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_pmic.5-001a/reg_addr
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360_ldo.5-0064/reg_addr
     chmod 0664 sys/kernel/debug/rt-regmap/mt6360-4e/reg_addr
-
-	#widevine driver node
-	chmod 0660 /dev/drm_wv
-	chown media system /dev/drm_wv
 
 on boot
     # start EAS+
@@ -379,17 +284,6 @@ on property:vendor.mtk.md1.status=reset
 on property:sys.boot_completed=1
     restart android-hardware-media-c2-hal-1-2
 
-on property:sys.boot_completed=1
-# Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 10%)
-    write /dev/cpuctl/background/cpu.shares 1024
-    write /dev/cpuctl/system-background/cpu.shares 2048
-    write /dev/cpuctl/system/cpu.shares 20480
-    # We only have system and background groups holding tasks and the groups below are empty
-    write /dev/cpuctl/camera-daemon/cpu.shares 20480
-    write /dev/cpuctl/foreground/cpu.shares 20480
-    write /dev/cpuctl/nnapi-hal/cpu.shares 20480
-    write /dev/cpuctl/rt/cpu.shares 20480
-    write /dev/cpuctl/top-app/cpu.shares 20480
 
 # Report max frequency to unity and miHoYo (HoYoverse) games tasks
     write /proc/sys/kernel/sched_lib_name "com.miHoYo.,com.HoYoverse.,UnityMain,libunity.so"
