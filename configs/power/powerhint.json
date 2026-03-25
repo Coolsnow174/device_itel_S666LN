@@ -240,7 +240,7 @@
       "Name": "TAUclampMin",
       "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
       "Values": [
-        "0",
+        "10",
         "30",
         "100"
       ],
