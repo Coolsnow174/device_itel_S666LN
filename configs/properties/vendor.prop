@@ -187,6 +187,7 @@ vendor.powerhal.interaction.offset=0
 vendor.powerhal.interaction.min=50
 vendor.powerhal.interaction.max=150
 ro.vendor.powerhal_fling_mode_support=1
+persist.device_config.activity_manager.use_freezer=true
 
 # PQ
 ro.vendor.mtk_pq_color_mode=1
