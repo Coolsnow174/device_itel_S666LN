@@ -59,6 +59,8 @@ vendor.camera.mdp.cz.enable=1
 vendor.camera.mdp.dre.enable=1
 vendor.debug.tran_cam_dynamic_fps=0
 vendor.mtk.camera.app.fd.video=1
+debug.morpho.eis.video_stab.enable=1
+debug.morpho.eis.force_on=1
 
 # Charger
 ro.vendor.mtk_fast_charging_support=1
