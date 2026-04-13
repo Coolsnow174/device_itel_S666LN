@@ -470,7 +470,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek/wlan/wifi_hal \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/millennium
+    hardware/millennium \
+    hardware/millennium/libtranlog
 
 # Thermal
 PRODUCT_PACKAGES += \
