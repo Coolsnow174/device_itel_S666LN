@@ -6,6 +6,7 @@
 
 DEVICE_PATH := device/itel/S666LN
 KERNEL_PATH := $(DEVICE_PATH)-kernel
+CONFIGS_PATH := $(DEVICE_PATH)/configs
 COMMON_GKI_PATH := device/millennium/common-kernel
 
 # Architecture
@@ -220,10 +221,11 @@ BOARD_AVB_VENDOR_DLKM_ADD_HASHTREE_FOOTER_ARGS += --hash_algorithm sha256
 BOARD_VNDK_VERSION := current
 
 # VINTF
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-	$(DEVICE_PATH)/framework_compatibility_matrix.xml
-DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+	$(CONFIGS_PATH)/vintf/framework_compatibility_matrix.xml \
+	hardware/mediatek/vintf/mediatek_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(CONFIGS_PATH)/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(CONFIGS_PATH)/vintf/compatibility_matrix.xml
 
 # Wi-Fi
 BOARD_WLAN_DEVICE := MediaTek
