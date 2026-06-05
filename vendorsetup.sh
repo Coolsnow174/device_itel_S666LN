@@ -2,10 +2,10 @@
 git clone -b lineage-21 https://github.com/dns24/kernel_itel_S666LN device/itel/S666LN-kernel
 
 # Clone Device Vendor Tree
-git clone -b lineage-21 https://github.com/dns24/vendor_itel_S666LN vendor/itel/S666LN
+git clone -b lineage-20 https://github.com/xaveroprjkt/vendor_itel_S666LN vendor/itel/S666LN
 
 # Clone Device Hardware
-git clone -b lineage-20.0 https://github.com/Anything-at-25-00/hardware_millennium hardware/transsion
+git clone -b lineage-20.0 https://github.com/xaveroprjkt/hardware_transsion hardware/transsion
 
 # Clone Device Hardware Mediatek
 rm -rf hardware/mediatek

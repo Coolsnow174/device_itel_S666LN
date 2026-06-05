@@ -4,13 +4,6 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
-cc_library {
-    name: "libshim_camera_metadata",
-    shared_libs: ["libcamera_metadata"],
-    srcs: ["libshim_camera_metadata.cpp"],
-    vendor: true
-}
-
 cc_library_shared {
     name: "libshim_sink",
     srcs: ["libshim_sink.cpp"],
@@ -23,4 +16,3 @@ cc_library_shared {
         "libmedia_headers",
     ],
 }
-
