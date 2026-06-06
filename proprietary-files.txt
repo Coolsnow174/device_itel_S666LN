@@ -279,6 +279,7 @@ vendor/lib/libCamera_hi5022qmipiraw_Resolution_zoom.so
 vendor/lib/libCamera_hi5022qmipiraw_ShortVideo.so
 vendor/lib/libCamera_hi5022qmipiraw_SuperNight.so
 vendor/lib/libCamera_hi5022qmipiraw_TikTok_Lite.so
+vendor/lib/libCamera_hi5022qmipiraw_TikTok_Lite_zoom.so
 vendor/lib/libCamera_hi5022qmipiraw_Video_1080P.so
 vendor/lib/libCamera_hi5022qmipiraw_Video_120fps.so
 vendor/lib/libCamera_hi5022qmipiraw_Video_2K.so
@@ -591,6 +592,7 @@ vendor/lib64/libCamera_hi5022qmipiraw_Resolution_zoom.so
 vendor/lib64/libCamera_hi5022qmipiraw_ShortVideo.so
 vendor/lib64/libCamera_hi5022qmipiraw_SuperNight.so
 vendor/lib64/libCamera_hi5022qmipiraw_TikTok_Lite.so
+vendor/lib64/libCamera_hi5022qmipiraw_TikTok_Lite_zoom.so
 vendor/lib64/libCamera_hi5022qmipiraw_Video_1080P.so
 vendor/lib64/libCamera_hi5022qmipiraw_Video_120fps.so
 vendor/lib64/libCamera_hi5022qmipiraw_Video_2K.so
