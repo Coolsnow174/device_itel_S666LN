@@ -1018,10 +1018,10 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/libwvhidl.so
 
 # EngineerMode
-lib/libem_support_jni.so
-lib64/libem_support_jni.so
-priv-app/EngineerMode/EngineerMode.apk:priv-app/EngineerMode/EngineerMode.apk
-vendor/bin/em_hidl
+system/lib/libem_support_jni.so;DISABLE_CHECKELF
+system/lib64/libem_support_jni.so;DISABLE_CHECKELF
+system/priv-app/EngineerMode/EngineerMode.apk
+vendor/bin/em_hidl;DISABLE_CHECKELF
 vendor/etc/init/em_hidl_user.rc
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so

@@ -1,15 +1,15 @@
 ## All proprietary files from this list, unless pinned and noted otherwise, are
 ## from S666LN-MA66BABCDEFLMNQ-T-OP-251212V1661
 
-dpm.img;AB
-gz.img;AB
+dpm.img;AB|5b13c1778a1de9ec1d17605312cd8b006965afa4
+gz.img;AB|0b9bfd2cf0cb5f4fed8afd2d13aeae08ebc75388
 lk.img;AB|8b2988de68f0eb77c56c3c2f5795c9effdc5faf9
 logo.bin:logo.img;AB|ec783efcdef579cffa5271d83391229aacea1213
-mcupm.img;AB
-md1img.img;AB
-pi_img.img;AB
-scp.img;AB
-spmfw.img;AB
-sspm.img;AB
-tee.img;AB
-tkv.img;AB
+mcupm.img;AB|db3809344cd27751aa312550c660cb5789af59ee
+md1img.img;AB|6dbd92744ec259aaa21975005a54e9bfd4d65226
+pi_img.img;AB|84f6feea23638f681215918987660b6c3ceb857e
+scp.img;AB|dc5af648a5335a1192cdd3c4db7d4bae8640582e
+spmfw.img;AB|33dcb7ed182acf94b5b72c80f0ca0bb987196454
+sspm.img;AB|480bc227f4d24cc43da30b51d2e5d97127e7bf8c
+tee.img;AB|69243bd67f8e7d601cff4903e6b2964ff1719260
+tkv.img;AB|f8cc268e6f0913bcdbe3f9bd3d2ad6d8a1168cfb

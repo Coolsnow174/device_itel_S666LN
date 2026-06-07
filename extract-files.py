@@ -85,7 +85,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .patchelf_version('0_17_2')
         .add_needed('libprocessgroup_shim.so'),
-    ('vendor/lib64/mt6789/lib3a.flash.so', 'vendor/lib64/mt6789/lib3a.ae.stat.so', 'vendor/lib64/mt6789/lib3a.sensors.flicker.so', 'vendor/lib64/mt6789/lib3a.sensors.color.so', 'vendor/lib64/mt6789/libaaa_ltm.so', 'vendor/lib64/lib3a.ae.pipe.so', 'vendor/lib64/libSQLiteModule_VER_ALL.so'): blob_fixup()
+    ('vendor/lib64/mt6789/lib3a.flash.so', 'vendor/lib64/mt6789/lib3a.ae.stat.so', 'vendor/lib64/mt6789/lib3a.sensors.flicker.so', 'vendor/lib64/mt6789/lib3a.sensors.color.so', 'vendor/lib64/lib3a.ae.pipe.so'): blob_fixup()
         .add_needed('liblog.so'),
     'vendor/lib64/librt_extamp_intf.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
@@ -127,6 +127,13 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcamera_metadata_shim.so'),
     'vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so': blob_fixup()
         .replace_needed('libhidlbase.so', 'libhidlbase-v31.so'),
+    'vendor/bin/em_hidl': blob_fixup()
+        .remove_needed('libbluetooth_relayer.so')
+        .remove_needed('libbluetoothem_mtk.so'),
+    ('system/lib64/libem_support_jni.so', 'system/lib/libem_support_jni.so'): blob_fixup()
+        .add_needed('libjni_shim.so'),
+    'vendor/etc/init/em_hidl_user.rc': blob_fixup()
+        .regex_replace(r'[ \t]*interface vendor\.mediatek\.hardware\.engineermode.*\n', ''),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
