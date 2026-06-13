@@ -1,8 +1,8 @@
 # Clone Device Kernel Tree
-git clone -b lineage-21 https://github.com/dns24/kernel_itel_S666LN device/itel/S666LN-kernel
+git clone -b thirteen https://github.com/kimelazx/device_itel_S666LN-kernel device/itel/S666LN-kernel
 
 # Clone Device Vendor Tree
-git clone -b lineage-20 https://github.com/xaveroprjkt/vendor_itel_S666LN vendor/itel/S666LN
+git clone -b lineage-20.0 https://github.com/kimelazx/vendor_itel_S666LN vendor/itel/S666LN
 
 # Clone Device Hardware
 git clone -b lineage-20.0 https://github.com/xaveroprjkt/hardware_transsion hardware/transsion
