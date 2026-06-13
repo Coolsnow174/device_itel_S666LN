@@ -5,7 +5,7 @@ git clone -b thirteen https://github.com/kimelazx/device_itel_S666LN-kernel devi
 git clone -b lineage-20.0 https://github.com/kimelazx/vendor_itel_S666LN vendor/itel/S666LN
 
 # Clone Device Hardware
-git clone -b lineage-20.0 https://github.com/xaveroprjkt/hardware_transsion hardware/transsion
+git clone -b lineage-20.0 https://github.com/swaraloka-lab/hardware_millennium hardware/transsion
 
 # Clone Device Hardware Mediatek
 rm -rf hardware/mediatek
