@@ -197,6 +197,7 @@ ro.vendor.powerdata.support=1
 ro.vendor.powerhal.cloud=1
 ro.vendor.powerhal_fling_mode_support=1
 ro.vendor.pref_scale_enable_cfg=1
+persist.device_config.activity_manager.use_freezer=true
 
 # PQ
 ro.vendor.mtk_pq_color_mode=1
