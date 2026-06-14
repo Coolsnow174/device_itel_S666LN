@@ -98,12 +98,11 @@ function blob_fixup() {
         system_ext/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
             ;;
-        vendor/etc/init/init.thermal_core.rc)
-            [ "$2" = "" ] && return 0
-            sed -i 's|ro.vendor.mtk_thermal_2_0|vendor.thermal.link_ready|g' "${2}"
-           ;;
         vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml)
             sed -i 's/1.1/1.2/' "$2"
+            ;;
+        vendor/lib*/hw/android.hardware.thermal@2.0-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
     esac
 }
