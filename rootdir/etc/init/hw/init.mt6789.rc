@@ -1074,7 +1074,7 @@ on boot
 #SPD: add for watermark_scale_factor at 20230302 start
 on property:sys.boot_completed=1
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
-    write /proc/sys/vm/watermark_scale_factor 10
+    write /proc/sys/vm/watermark_scale_factor 125
     setprop vendor.tran.cur_max_process 72
 #SPD: add for watermark_scale_factor at 20230302 end
 
