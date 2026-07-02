@@ -1,21 +1,22 @@
 #!/bin/bash
 
 RET=0
-echo "- Applying Aperture Mediatek HFPS Mode and EIS Patches"
-cd packages/apps/Aperture
-curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packages/apps/Aperture/0001-Aperture-Enable-MediaTek-HFPS-Mode-for-60-FPS-video-.patch | git am || {
-  RET=$?
-  git am --abort >/dev/null 2>&1
-}
-curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/packages/apps/Aperture/0002-Aperture-Enable-MediaTek-EIS-and-EIS-preview-mode-fo.patch | git am || {
-  RET=$?
-  git am --abort >/dev/null 2>&1
-}
-cd ../../../
 echo "- Applying WPA3 Patch"
 cd external/wpa_supplicant_8
 curl https://raw.githubusercontent.com/KimelaZX/patches/refs/heads/sixteen/external/wpa_supplicant_8/do_not_set_NL80211_WPA_VERSION_3.patch | git am || {
   RET=$?
+  git am --abort >/dev/null 2>&1
+}
+cd ../../
+
+echo "- Applying fenrir compatiblity patches"
+cd system/core
+curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/system/core/0001-libfs_avb-Allow-LKs-patched-with-fenrir-to-boot-on-A.patch | git am || {
+  RET=1
+  git am --abort >/dev/null 2>&1
+}
+curl https://raw.githubusercontent.com/MillenniumOSS/patches/refs/heads/sixteen/system/core/0002-fastbootd-Always-return-false-for-GetDeviceLockStatu.patch | git am || {
+  RET=1
   git am --abort >/dev/null 2>&1
 }
 cd ../../
