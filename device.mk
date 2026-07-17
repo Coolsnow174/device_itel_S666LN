@@ -248,9 +248,6 @@ $(call inherit-product, vendor/mediatek/ims/ims.mk)
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
-# JamesDSP
-$(call inherit-product-if-exists, vendor/JamesDSP/config.mk)
-
 # Keylayout
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/mtk-tpd.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/mtk-tpd.kl
@@ -337,7 +334,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     ApertureOverlay \
-    NcmTetheringOverlay
+    NcmTetheringOverlay \
+    AudioFX
 
 # Permissions
 PRODUCT_COPY_FILES += \
