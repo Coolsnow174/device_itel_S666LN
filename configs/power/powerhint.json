@@ -262,6 +262,7 @@
       "Path": "/sys/kernel/ged/hal/timer_base_dvfs_margin",
       "Values": [
         "798",
+        "18743356",
         "50"
       ],
       "DefaultIndex": 0,
@@ -271,8 +272,8 @@
       "Name": "GpuDvfsLoadingStep",
       "Path": "/sys/kernel/ged/hal/loading_base_dvfs_step",
       "Values": [
-        "259",
         "4",
+        "771",
         "15"
       ],
       "DefaultIndex": 0,
@@ -305,24 +306,6 @@
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
-    },
-    {
-      "Name": "PMQoSCpuDmaLatency",
-      "Path": "/dev/cpu_dma_latency",
-      "Values": [
-        "51",
-        "0"
-      ],
-      "HoldFd": true
-    },
-    {
-      "Name": "RestrictedCpuset",
-      "Path": "/dev/cpuset/restricted/cpus",
-      "Values": [
-        "0-3",
-        "0-7"
-      ],
-      "ResetOnInit": false
     }
   ],
   "Actions": [
@@ -408,25 +391,49 @@
       "PowerHint": "INTERACTION",
       "Node": "CPUEfficiencyClusterMinFreq",
       "Duration": 1500,
-      "Value": "1000000"
+      "Value": "1350000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUSuperClusterMinFreq",
       "Duration": 1500,
-      "Value": "1100000"
+      "Value": "1400000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUEfficiencyClusterMaxFreq",
+      "Duration": 1500,
+      "Value": "1600000"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CPUSuperClusterMaxFreq",
+      "Duration": 1500,
+      "Value": "2200000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "FGUclampMin",
-      "Duration": 1500,
+      "Duration": 3000,
       "Value": "10"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "TAUclampMin",
-      "Duration": 1500,
+      "Duration": 5000,
       "Value": "30"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "GpuPwrLevel",
+      "Duration": 1500,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "CciFreq",
+      "Duration": 1500,
+      "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
@@ -474,13 +481,13 @@
       "PowerHint": "LAUNCH",
       "Node": "GpuDvfsTimerMargin",
       "Duration": 2000,
-      "Value": "50"
+      "Value": "18743356"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GpuDvfsLoadingStep",
       "Duration": 2000,
-      "Value": "4"
+      "Value": "771"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",
@@ -547,30 +554,6 @@
       "Node": "DoubleTapToWake",
       "Duration": 0,
       "Value": "cc1"
-    },
-    {
-      "PowerHint": "ML_ACC",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 2000,
-      "Value": "51"
-    },
-    {
-      "PowerHint": "DEVICE_IDLE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-3"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-3"
-    },
-    {
-      "PowerHint": "DISPLAY_ACTIVE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-7"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
