@@ -4,7 +4,7 @@
 git clone -b sixteen https://github.com/KimelaZX/device_itel_S666LN-kernel device/itel/S666LN-kernel
 
 #Clone Common Kernel Tree
-git clone https://github.com/MillenniumOSS/android_device_millennium_common-kernel device/millennium/common-kernel
+git clone -b sixteen-qpr2 https://github.com/MillenniumOSS/android_device_millennium_common-kernel device/millennium/common-kernel
 
 #Clone Vendor Tree
 git clone -b lineage-23.2 https://github.com/arundaya-project/vendor_itel_S666LN vendor/itel/S666LN
